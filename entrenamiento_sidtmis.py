@@ -3,6 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
 # READING DATA
+# Formatting adjustment for Bolivian regional CSV
 df = pd.read_csv('datos_sensores.csv', sep=';', decimal=',')
 
 # PREPARATION
