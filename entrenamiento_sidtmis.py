@@ -15,19 +15,19 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 # MODEL CREATION
 # Using Random Forest
-modelo = RandomForestClassifier(n_estimators=100, random_state=42)
+model = RandomForestClassifier(n_estimators=100, random_state=42)
 
 # TRAINING
 print("Training SIDTMIS brain...")
-modelo.fit(X_train, y_train)
+model.fit(X_train, y_train)
 
 # EVALUATION
-predicciones = modelo.predict(X_test)
+predictions = model.predict(X_test)
 print("\n--- RESULTS ---")
-print(classification_report(y_test, predicciones))
+print(classification_report(y_test, predictions))
 
 # MATRIX
 print("\n--- CONFUSION MATRIX ---")
-print(confusion_matrix(y_test, predicciones))
+print(confusion_matrix(y_test, predictions))
 # TECHNICAL NOTE: Model verified with 200 test samples.
 # Final result: F1 score of 1.00 and 0 false positives.
